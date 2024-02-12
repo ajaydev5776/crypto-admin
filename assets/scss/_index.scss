@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+// trending cripto list css
+.trendingcripto {
+    & .trendingcripto-list {
+        display: flex;
+        overflow: auto hidden;
+        & .list-item {
+            font-size: 12px;
+            line-height: normal;
+            color: $white;
+            padding-left: 10px;
+            position: relative;
+            text-transform: uppercase;
+            &::before{
+                content: '';
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $white;
+                position: absolute;
+                left: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    & .losercripto{
+        display: none;
+    }
+    &.losers-cripto{
+        & .losercripto{
+            display: flex;
+        }
+        & .topcripto{
+            display: none;
+        }
+    }
+}
+
+
+
+// criptotiming-high
+.criptotiming-high {
+    & .carditem {
+        padding: 0.5rem 0.75rem;
+        & .leftside {
+            & .criptoname {
+                font-size: 14px;
+                & img {
+                    width: 16px;
+                }
+            }
+            & .prich {
+                font-size: 14px;
+                & span {
+                    font-size: 12px;
+                }
+            }
+        }
+        & .rightside {
+            & img {
+                width: 16px;
+                object-fit: contain;
+            }
+        }
+        &.active{
+            & .rightside {
+                & img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        &.miditems {
+            & .leftside {
+                border-right: 1px solid lighten($theme1, 20);
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+
+// left-chart-crtpto
+.left-chart-crtpto {
+    transition: all 0.3s;
+    &.active {
+        display: none;
+    }
+    & .topheader {
+        background-color: lighten($theme1, 20);
+        & .searchbar {
+            background-color: transparent;
+        }
+    }
+}
