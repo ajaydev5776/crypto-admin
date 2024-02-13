@@ -76,7 +76,7 @@
                                     <div class="col-2">
                                         <div class="carditem bg-theme1 rounded-1 d-flex justify-content-between gap-3 clickable" id="chart-crypto-switch">
                                             <div class="leftside d-flex flex-column gap-1">
-                                                <div class="criptoname text-theme2">BTC<span class="text-white-50">/INR</span> <img src="assets/img/icon/home.svg" class="ms-2" alt="star"></div>
+                                                <div class="criptoname text-theme2">BTC<span class="text-white-50">/INR</span> <img src="assets/img/icon/Star.svg" class="ms-2" alt="star"></div>
                                                 <div class="prich d-flex align-items-center gap-2">₹41,33,600 <span class="text-theme4">-0.67%</span></div>
                                             </div>
                                             <div class="rightside"><img src="assets/img/icon/right-arrow.svg" alt="arrow"></div>
@@ -138,17 +138,29 @@
                                         <div class="col-3 h-100 left-chart-crtpto" id="left-chart-crtpto">
                                             <div class="row h-100 flex-column flex-nowrap">
                                                 <div class="col-12">
-                                                    <!-- <form class="d-flex" role="search">
-                                                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                                    </form> -->
                                                     <div class="topheader p-2">
                                                         <form class="d-flex" role="search">
-                                                            <input class="form-control searchbar" type="search" placeholder="Search" aria-label="Search">
+                                                            <input class="form-control searchbar shadow-none text-white" type="search" placeholder="Search" aria-label="Search">
                                                         </form>
+                                                        <div class="navs d-flex align-items-center gap-2 mb-2 mt-3">
+                                                            <span class="star-fill"><img src="assets/img/icon/Star-fill.svg" alt="Star-fill"></span>
+                                                            <ul class="nav nav-pills m-0 w-100 d-flex align-items-center justify-content-around" id="pills-tab" role="tablist">
+                                                                <li class="nav-item" role="presentation">
+                                                                  <button class="nav-link rounded-0 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All Coins</button>
+                                                                </li>
+                                                                <li class="nav-item" role="presentation">
+                                                                  <button class="nav-link rounded-0" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Innovation Zone</button>
+                                                                </li>
+                                                              </ul>
+                                                              
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 h-100 flex-fill overflow-y-auto">
-                                                
+                                                    <div class="tab-content" id="pills-tabContent">
+                                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">12</div>
+                                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">34</div>
+                                                      </div>
                                                 </div>
                                             </div>
                                         </div>
