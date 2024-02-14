@@ -247,7 +247,8 @@ var options = {
     ],
     chart: {
         type: "candlestick",
-        height: 585,
+        height: 400,
+        // height: 585,
     },
     title: {
         text: "BTC/INR",
