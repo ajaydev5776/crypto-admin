@@ -12,6 +12,7 @@
             padding-left: 10px;
             position: relative;
             text-transform: uppercase;
+            white-space: nowrap;
             &::before{
                 content: '';
                 width: 4px;
