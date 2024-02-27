@@ -44,3 +44,48 @@ body{
 .cryptocoinspart{
   max-height: 466px;
 }
+
+.modal{
+  & .modal-content {
+    background-color: rgba($white, 0.2);
+    backdrop-filter: blur(10px);
+    & .modal-header{
+      border-bottom: 1px solid rgba($white, 0.2);
+    }
+    & .modal-footer {
+      border-top: 1px solid rgba($white, 0.2);
+    }
+  }
+}
+
+.loginmodal {
+  & form {
+    & .form-control{
+      background-color: transparent;
+      color: $white;
+      &:focus{
+        border-color: $theme2;
+      }
+      &::placeholder{
+        color: rgba($white, 0.4);
+      }
+    }
+  }
+}
+
+.form {
+  & .form-check {
+    & .form-check-input {
+      width: 18px;
+      height: 18px;
+      border-radius: 0px;
+      border: 1px solid $theme2;
+      background-color: transparent;
+      outline: none;
+      margin-top: -2px;
+      &:checked{
+        background-color: $theme2;
+      }
+    }
+  }
+}
