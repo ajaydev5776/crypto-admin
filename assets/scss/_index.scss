@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "mixing";
 
 // trending cripto list css
 .trendingcripto {
@@ -43,16 +44,31 @@
 // criptotiming-high
 .criptotiming-high {
     & .carditem {
-        padding: 0.5rem 0.75rem;
+        padding: 0rem 0.5rem;
+        @include lg{
+            padding: 0.5rem 0.75rem;
+        }
         & .leftside {
             & .criptoname {
-                font-size: 14px;
+                font-size: 10px;
+                @include lg{
+                    font-size: 12px;
+                }
+                @include xl{
+                    font-size: 14px;
+                }
                 & img {
                     width: 16px;
                 }
             }
             & .prich {
-                font-size: 14px;
+                font-size: 12px;
+                @include lg{
+                    font-size: 12px;
+                }
+                @include xl{
+                    font-size: 14px;
+                }
                 & span {
                     font-size: 12px;
                 }
@@ -80,12 +96,20 @@
     }
 }
 
-
+.chartHeight{
+    height: unset !important;
+    @include lg{
+        height: 100%;
+    }
+}
 
 // left-chart-crtpto
 .left-chart-crtpto {
     transition: all 0.3s;
-    width: 220px;
+    width: 100%;
+    @include sm{
+        width: 220px;
+    }
     &.active {
         display: none;
     }
@@ -177,3 +201,6 @@ img {
         }
     }
 }
+
+
+

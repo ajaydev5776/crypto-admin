@@ -15,7 +15,14 @@
 
 @include media-breakpoint-down(xl) {}
 
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(lg) {
+    .maindashboard{
+        height: unset;
+      }
+      .cryptocoinspart, .chartpart{
+        max-height: unset;
+      }
+}
 
 @include media-breakpoint-down(md) {}
 
