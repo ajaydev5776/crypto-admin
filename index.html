@@ -35,7 +35,7 @@
                                 <li class="nav-item"><a class="nav-link" href="javascript:;">Contests</a></li>
                                 <li class="nav-item"><a class="nav-link" href="javascript:;">Help Center</a></li>
                                 <li class="nav-item"><a class="nav-link" href="javascript:;"><span><img src="assets/img/icon/contact.svg" alt="contact" class="object-contain w-100"></a></span></li>
-                                <li class="nav-item"><a class="text-uppercase fw-medium btn btn-theme2 themebtn" href="javascript:;">Login / Sign up</a></li>
+                                <li class="nav-item"><a class="text-uppercase fw-medium btn btn-theme2 themebtn" href="javascript:;" data-bs-toggle="modal" data-bs-target="#login">Login / Sign up</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -977,10 +977,187 @@
     <!-- Admin Structure End -->
 
 
+    <!-- login Modal -->
+    <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal form fade loginmodal" id="login" aria-hidden="true" aria-labelledby="loginLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header px-4">
+          <h1 class="modal-title fs-5" id="loginLabel">Log in to your PFW Account</h1>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form class="row row-gap-4">
+            <div class="col-12">
+                <label for="number" class="form-label fs-16">Enter your mobile number </label>
+                <input type="tel" class="form-control shadow-none  p-3 fs-16" id="number" placeholder="PFW ragister mobile number">
+            </div>
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-theme1 w-100" data-bs-target="#otp2" data-bs-toggle="modal">GET OTP</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer px-4 justify-content-between">
+            <div class="fs-16">Don’t have a PFW account?</div>
+            <a href="javascript:;" class="fs-16 text-theme2  text-decoration-none" type="button" data-bs-target="#login2" data-bs-toggle="modal">Ragister</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal form loginmodal fade" id="login2" aria-hidden="true" aria-labelledby="loginLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header px-4">
+          <h1 class="modal-title fs-5" id="loginLabel2">Ragister to PFW</h1>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-4">
+            <form class="row row-gap-4">
+                <div class="col-12">
+                    <label for="number" class="form-label fs-16">Phone number </label>
+                    <input type="tel" class="form-control shadow-none  p-3 fs-16" id="number" placeholder="Enter your mobile number">
+                </div>
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-theme1 w-100" data-bs-target="#otp2" data-bs-toggle="modal">GET OTP</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer px-4 border-0 justify-content-between">
+            <div class="fs-16">Have a PFW account?</div>
+            <a href="javascript:;" class="fs-16 text-theme2 text-decoration-none" type="button" data-bs-target="#login" data-bs-toggle="modal">Login</a>
+          <!-- <button class="btn btn-theme1" data-bs-target="#login" data-bs-toggle="modal">Back to first</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal form loginmodal fade" id="otp2" aria-hidden="true" aria-labelledby="otpLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header px-4">
+          <h1 class="modal-title fs-5" id="otpLabel2">OTP</h1>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-4">
+            <form class="row row-gap-4">
+                <div class="col-12">
+                    <label for="number" class="form-label fs-16 m-0">Phone number </label>
+                </div>
+                <div class="col-12 verification-code">
+                    <ul class="otpbox verification-code--inputs otpbox">
+                        <input type="text" maxlength="1" class="form-control text-center shadow-none fs-16  box">
+                        <input type="text" maxlength="1" class="form-control text-center shadow-none fs-16  box">
+                        <input type="text" maxlength="1" class="form-control text-center shadow-none fs-16  box">
+                        <input type="text" maxlength="1" class="form-control text-center shadow-none fs-16  box">
+                        <input type="text" maxlength="1" class="form-control text-center shadow-none fs-16  box">
+                        <input type="text" maxlength="1" class="form-control text-center shadow-none fs-16  box">
+                    </ul>
+                </div>
+                <div class="otp-container">
+                    <div class="fs-16 text-white">Didn’t receive OTP?</div>
+                    <div class="d-flex align-items-center gap-2">
+                        <a type="button" class="fs-16 text-theme2  text-decoration-none" id="resendBtn" onclick="startResendTimer()">Resend OTP</a> <p class="m-0" id="timer"></p>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-theme1 w-100">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer px-4 border-0 justify-content-between">
+            <div class="fs-16">Back to?</div>
+            <div class="d-flex align-items-center gap-2">
+                <a href="javascript:;" class="fs-16 text-theme2  text-decoration-none" type="button" data-bs-target="#login" data-bs-toggle="modal">Login</a>
+                <a href="javascript:;" class="fs-16 text-theme2  text-decoration-none" type="button" data-bs-target="#login2" data-bs-toggle="modal">Ragister</a>
+            </div>
+          <!-- <button class="btn btn-theme1" data-bs-target="#login" data-bs-toggle="modal">Back to first</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <button class="btn btn-theme1" type="button" data-bs-target="#login" data-bs-toggle="modal">Open first modal</button> -->
+
+
     <!-- *Bootstrap Js* -->
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- *Custom Js* -->
     <script src="assets/js/chart.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        //Code Verification
+        var verificationCode = [];
+        $(".verification-code input[type=text]").keyup(function (e) {
+        
+        // Get Input for Hidden Field
+        $(".verification-code input[type=text]").each(function (i) {
+            verificationCode[i] = $(".verification-code input[type=text]")[i].value; 
+            $('#verificationCode').val(Number(verificationCode.join('')));
+            //console.log( $('#verificationCode').val() );
+        });
+
+        //console.log(event.key, event.which);
+
+        if ($(this).val() > 0) {
+            if (event.key == 1 || event.key == 2 || event.key == 3 || event.key == 4 || event.key == 5 || event.key == 6 || event.key == 7 || event.key == 8 || event.key == 9 || event.key == 0) {
+            $(this).next().focus();
+            }
+        }else {
+            if(event.key == 'Backspace'){
+                $(this).prev().focus();
+            }
+        }
+
+        }); // keyup
+
+        $('.verification-code input').on("paste",function(event,pastedValue){
+        console.log(event)
+        $('#txt').val($content)
+        console.log($content)
+        //console.log(values)
+        });
+
+        $editor.on('paste, keydown', function() {http://jsfiddle.net/5bNx4/#run
+        var $self = $(this);            
+                    setTimeout(function(){ 
+                        var $content = $self.html();             
+                        $clipboard.val($content);
+                    },100);
+            });
+    </script>
+
+    <!-- OTP Timer -->
+    <script>
+
+    let timer;
+    let countdown = 60; 
+
+    function startResendTimer() {
+        document.getElementById('resendBtn').disabled = true;
+
+        // Start the countdown
+        timer = setInterval(updateTimer, 1000);
+    }
+
+    function updateTimer() {
+    const timerElement = document.getElementById('timer');
+    
+    if (countdown > 0) {
+        timerElement.textContent = `Resend in ${countdown} seconds`;
+        countdown--;
+    } else {
+        // Enable the button when the countdown reaches zero
+        document.getElementById('resendBtn').disabled = false;
+        timerElement.textContent = '';
+        
+        // Reset countdown for the next attempt
+        countdown = 60;
+        
+        // Stop the timer
+        clearInterval(timer);
+    }
+}
+
+    </script>
 </body>
 </html>

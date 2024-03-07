@@ -44,7 +44,100 @@ body{
 .cryptocoinspart{
   max-height: 466px;
 }
-
 .maindashboard{
   height: 100vh;
+}
+
+.modal-backdrop.show{
+  background-color: rgba($black, 0.3);
+  backdrop-filter: blur(5px);
+  opacity: 1;
+}
+
+.modal{
+  & .modal-content {
+    background-color: rgba($white, 0.2);
+    backdrop-filter: blur(10px);
+    & .modal-header{
+      border-bottom: 1px solid rgba($white, 0.2);
+    }
+    & .modal-footer {
+      border-top: 1px solid rgba($white, 0.2);
+    }
+  }
+}
+
+.loginmodal {
+    & .form-control{
+      background-color: transparent;
+      color: $white;
+      &:focus{
+        border-color: $theme2;
+      }
+      &::placeholder{
+        color: rgba($white, 0.4);
+      }
+    }
+    & .btn , & .form-control{
+      height: 50px;
+    }
+    & a{
+      transition: all ease-in-out 0.3s;
+      border-bottom: 1px solid transparent;
+      &:hover{
+        border-color: $theme2;
+      }
+    }
+}
+
+.form {
+  & .form-check {
+    & .form-check-input {
+      width: 18px;
+      height: 18px;
+      border-radius: 0px;
+      border: 1px solid $theme2;
+      background-color: transparent;
+      outline: none;
+      margin-top: -2px;
+      &:checked{
+        background-color: $theme2;
+      }
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
+
+.otpbox {
+  margin: 0;
+  padding: 0px;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  & .box{
+      width: 50px;
+      height: 50px;
+      aspect-ratio: 1/1;
+      text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .otpbox {
+    & .box{
+        width: 40px;
+        height: 40px !important;
+    }
+  }
+  
 }
