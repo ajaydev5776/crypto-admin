@@ -9,7 +9,20 @@
     }
 }
 
-
+.refreshBtnBtn{
+    background: transparent;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+    line-height: 120%;
+    color: #cda954 !important;
+    &:hover{
+        color: $white !important;
+    }
+}
+.refreshSvg{
+    height: 15px;
+    width: 15px;
+}
 .criptoFilter {
     outline: none;
     display: flex;
