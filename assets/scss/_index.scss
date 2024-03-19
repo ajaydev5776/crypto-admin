@@ -379,8 +379,34 @@ img {
         border-radius: 100%;
         overflow: hidden;
     }
+
+
 }
 
+// .referSection{
+//     & .referSectionOne > h1{
+//         // color: red;
+//         font-weight: 900;
+//     }
 
+//     & .referSectionOne > h1:first-child {
+//         color: orange; /* Setting the color to orange */
+//     }
+
+//     & .referSectionOne .referLink{
+//         border-radius: 10px;
+//         border: 2px solid orange;
+//     }
+
+//     & .referSectionOne .referLink >h4{
+//         border-radius: 10px;
+//     }
+// }
+
+.keyHighLights {
+    & .keyPara {
+        font-size: 50px;
+    }
+}
 
 
