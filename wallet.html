@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- *Bootstrap Css* -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- *Custom Css* -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body >
+   
+    <div class="container-fluid walletSection py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- *Bootstrap Js* -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- *Custom Js* -->
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        //Code Verification
+        var verificationCode = [];
+        $(".verification-code input[type=text]").keyup(function (e) {
+        
+        // Get Input for Hidden Field
+        $(".verification-code input[type=text]").each(function (i) {
+            verificationCode[i] = $(".verification-code input[type=text]")[i].value; 
+            $('#verificationCode').val(Number(verificationCode.join('')));
+            //console.log( $('#verificationCode').val() );
+        });
+
+        //console.log(event.key, event.which);
+
+        if ($(this).val() > 0) {
+            if (event.key == 1 || event.key == 2 || event.key == 3 || event.key == 4 || event.key == 5 || event.key == 6 || event.key == 7 || event.key == 8 || event.key == 9 || event.key == 0) {
+            $(this).next().focus();
+            }
+        }else {
+            if(event.key == 'Backspace'){
+                $(this).prev().focus();
+            }
+        }
+
+        }); // keyup
+
+        $('.verification-code input').on("paste",function(event,pastedValue){
+        console.log(event)
+        $('#txt').val($content)
+        console.log($content)
+        //console.log(values)
+        });
+
+        $editor.on('paste, keydown', function() {http://jsfiddle.net/5bNx4/#run
+        var $self = $(this);            
+                    setTimeout(function(){ 
+                        var $content = $self.html();             
+                        $clipboard.val($content);
+                    },100);
+            });
+    </script>
+
+    <!-- OTP Timer -->
+    <script>
+
+    let timer;
+    let countdown = 60; 
+
+    function startResendTimer() {
+        document.getElementById('resendBtn').disabled = true;
+
+        // Start the countdown
+        timer = setInterval(updateTimer, 1000);
+    }
+
+    function updateTimer() {
+    const timerElement = document.getElementById('timer');
+    
+    if (countdown > 0) {
+        timerElement.textContent = `Resend in ${countdown} seconds`;
+        countdown--;
+    } else {
+        // Enable the button when the countdown reaches zero
+        document.getElementById('resendBtn').disabled = false;
+        timerElement.textContent = '';
+        
+        // Reset countdown for the next attempt
+        countdown = 60;
+        
+        // Stop the timer
+        clearInterval(timer);
+    }
+}
+
+    </script>
+</body>
+</html> 
