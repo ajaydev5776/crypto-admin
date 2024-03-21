@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainBox{
+            display: flex;
+            gap: 5px;
+            padding: 10px;
+        }
+        .box{
+            position: relative;
+            height: 100px;
+            width: 100px;
+            overflow: hidden;
+            background-color: aqua;
+            width: 33%;
+        }
+        .box::after{
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            height: 2px;
+            width: 100%;
+            background-color: red;
+        }
+        @media screen and (max-width:500px){
+            .mainBox{
+                display: block;
+            }
+        }
+        .middleSpan{
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainBox">
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolor tempore adipisci nisi enim nam placeat deserunt quam magnam officiis, consectetur magni perspiciatis voluptatum ab, vel illo dignissimos eius. Quidem?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolor tempore adipisci nisi enim nam placeat deserunt quam magnam officiis, consectetur magni perspiciatis voluptatum ab, vel illo dignissimos eius. Quidem?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolor tempore adipisci nisi enim nam placeat deserunt quam magnam officiis, consectetur magni perspiciatis voluptatum ab, vel illo dignissimos eius. Quidem?
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum quam facilis quas aut minus expedita itaque accusamus! Sed, totam nulla quasi, <span class="middleSpan">nam cum quibusdam fuga fugiat molestias suscipit,</span> possimus unde!</p>
+</body>
+</html>
