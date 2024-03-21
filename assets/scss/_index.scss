@@ -512,15 +512,15 @@ img {
                 line-height: 120%;
                 color: $theme6;
             }
-            & .voucherForm{
-                &.formLabel{
+        }
+        & .voucherForm{
+            &.formLabel{
+                color: $theme6 !important;
+            }
+            & .formControl{
+                background: $theme1 !important;
+                &::placeholder{
                     color: $theme6 !important;
-                }
-                & .formControl{
-                    background: $theme1 !important;
-                    &::placeholder{
-                        color: $theme6 !important;
-                    }
                 }
             }
         }
