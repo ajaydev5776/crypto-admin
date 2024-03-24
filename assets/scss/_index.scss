@@ -115,13 +115,6 @@
     }
     & .topheader {
         background-color: $theme1;
-        & .searchbar {
-            background-color: transparent;
-            font-size: 14px;
-            &::placeholder{
-                color: $white;
-            }
-        }
         & .navs {
             & .star-fill {
                 display: flex;
@@ -135,6 +128,15 @@
                 }
             }
         }
+    }
+}
+
+.searchbar {
+    background-color: transparent !important;
+    font-size: 14px;
+    color: $white !important;
+    &::placeholder{
+        color: $theme6 !important;
     }
 }
 
