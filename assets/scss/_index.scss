@@ -203,14 +203,6 @@ img {
 }
 
 .portfolioSection{
-    padding-inline: 0;
-    @include xl{
-        padding-inline: 120px;
-    }
-    @include xxl{
-        padding-inline: 230px;
-
-    }
     & .header{
         background-color: #1d202c;
         padding: 0px 10px;
@@ -228,6 +220,9 @@ img {
         & .leftside {
             & .criptoname {
                 font-size: 10px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
                 color: #a0aec0 !important;
                 @include lg{
                     font-size: 12px;
@@ -384,29 +379,41 @@ img {
 .referSection{
     & .referSectionOne{
         & .earntxt{
-            font-size: 60px;
+            font-size: 55px;
             background: linear-gradient(to right, #cda954, 
                     #ff6b08, #f14366); 
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 700;
             line-height: 120%;
-            @include md{
+            @include xl{
+                font-size: 60px;
+            }
+            @include xxl{
                 font-size: 72px;
             }
         }
         & .subtxt{
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             line-height: 120%;
-            @include md{
+            @include xl{
+                font-size: 30px;
+            }
+            @include xxl{
                 font-size: 36px;
             }
         }
         & .moretxt{
-            font-size: 20px;
+            font-size: 16px;
             font-weight: normal;
             color: $theme5;
+            @include xl{
+                font-size: 18px;
+            }
+            @include xxl{
+                font-size: 20px;
+            }
         }
         & .gradinetBorder{
             background: linear-gradient(#f14366, #cda954);
@@ -423,7 +430,7 @@ img {
                 }
                 & .referLinktxt{
                     padding-block: 10px;
-                    font-size: 20px;
+                    font-size: 14px;
                     font-weight: normal;
                     line-height: 120%;
                 }
@@ -460,24 +467,32 @@ img {
 .tableSection{
     & .mainCard{
         & .cardImg{
-            height: 41px;
-            width: 80px;
+            height: 40px;
         }
         & .cardtxt{
-            font-size: 20px;
+            font-size: 16px;
             line-height: 120%;
             font-weight: normal;
-            color: $theme6;
+            color: $white;
             text-align: center;
-            padding: 35px 0 15px 0;
+            padding: 15px 0 20px 0;
+            @include md{
+                padding: 20px 0 25px 0;
+            }
+            @include lg{
+                padding: 30px 0 20px 0;
+            }
+            @include xl{
+                padding: 35px 0 20px 0;
+            }
         }
         & .number{
             text-align: center;
             font-size: 16px;
-            height: 24px;
-            width: 24px;
+            height: 30px;
+            width: 30px;
             color: $black;
-            background-color: $theme6;
+            background-color: $theme2;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -491,7 +506,7 @@ img {
 // voucher section start
     .voucherSection{
         & .fluidVoucher{
-            padding: 10px 15px;
+            // padding: 10px 15px;
             background: $theme1;
             border-radius: 8px;
             @include md{
@@ -499,18 +514,25 @@ img {
             }
         }
         & .marginDiv{
-            margin-block: 40px;
+            @include xxl{
+                margin-block: 40px;
+            }
             & .text{
-                font-size: 25px;
+                font-size: 22px;
                 @include sm{
+                    font-size: 28px;
+                }
+                @include lg{
                     font-size: 30px;
-
                 }
             }
             & .subtext{
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 120%;
                 color: $theme6;
+                @include lg{
+                    font-size: 18px;
+                }
             }
         }
         & .voucherForm{
