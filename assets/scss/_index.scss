@@ -476,15 +476,6 @@ img {
             color: $theme5;
             text-align: center;
             padding: 15px 0 20px 0;
-            @include md{
-                padding: 20px 0 25px 0;
-            }
-            @include lg{
-                padding: 30px 0 20px 0;
-            }
-            @include xl{
-                padding: 35px 0 20px 0;
-            }
         }
         & .number{
             text-align: center;
@@ -571,7 +562,19 @@ img {
             }
         }
         & .mainCard{
-            padding-inline: 20px;
+            padding: 20px;
+            background: $theme1;
+            height: 100%;
+            border-radius: 8px;
+            transition: all ease-in-out 0.3s;
+            border: 1px solid transparent;
+            &:hover{
+                transform: translateY(-10px);
+                border-color: rgba($theme2, 0.5);
+                & .cardtxt {
+                    color: $white;
+                }
+            }
             @include xl{
             }
             & .cardImg{
@@ -587,6 +590,7 @@ img {
                 font-weight: normal;
                 text-align: center;
                 color: $theming5;
+                transition: all ease-in-out 0.3s;
             }
         }
     }
