@@ -473,7 +473,7 @@ img {
             font-size: 16px;
             line-height: 120%;
             font-weight: normal;
-            color: $white;
+            color: $theme5;
             text-align: center;
             padding: 15px 0 20px 0;
             @include md{
@@ -508,22 +508,24 @@ img {
         & .fluidVoucher{
             // padding: 10px 15px;
             background: $theme1;
-            border-radius: 8px;
-            @include md{
-                padding: 10px 32px;
-            }
+            // @include md{
+            //     padding: 10px 32px;
+            // }
         }
         & .marginDiv{
-            @include xxl{
-                margin-block: 40px;
-            }
+            // @include xxl{
+            //     margin-block: 40px;
+            // }
             & .text{
-                font-size: 22px;
+                font-size: 14px;
                 @include sm{
-                    font-size: 28px;
+                    font-size: 16px;
+                }
+                @include md{
+                    font-size: 18px;
                 }
                 @include lg{
-                    font-size: 30px;
+                    font-size: 20px;
                 }
             }
             & .subtext{
@@ -559,17 +561,22 @@ img {
             }
         }
         & .mainCard{
-            padding-inline: 20px;
+            @include xl{
+                padding-inline: 20px;
+            }
             & .cardImg{
-                height: 100px;
-                max-width: 130px;
+                // height: 70px;
+                max-width: 100px;
                 margin-inline: auto;
+                & img {
+                    aspect-ratio: 30/15;
+                }
             }
             & .cardtxt{
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: normal;
                 text-align: center;
-                color: $theme6;
+                color: $theming5;
             }
         }
     }
