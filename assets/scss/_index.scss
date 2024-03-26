@@ -771,7 +771,9 @@ img {
     }
     & tbody{
         & tr{
-            color: $white;
+            & td {
+                color: $white;
+            }
             &:last-child{
                 & td{
                     border: none;
