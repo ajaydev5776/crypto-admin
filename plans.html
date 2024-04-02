@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- *Bootstrap Css* -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- *Custom Css* -->
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- navbar start -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 px-0">
+                    <nav class="navbar header navbar-expand-lg px-3">
+                        <a class="navbar-brand d-flex" href="index.html"><img src="assets/img/logo.svg" class="object-contain h-100" alt="logo"></a>
+                        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> -->
+                        <button class="navbar-toggler p-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                        <div class="offcanvas offcanvas-end text-bg-dark bg-theme1" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbar2Label"><img src="assets/img/logo.svg" class="object-contain h-100" alt="logo"></h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                              </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav gap-3 align-items-lg-center me-auto mb-3 mb-lg-0">
+                                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="javascript:;">Spot</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="javascript:;">Orders</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="wallet.html">Wallet & Fees</a></li>
+                                    <li class="nav-item"><a class="nav-link deposit text-uppercase fw-medium disabled d-inline-flex" aria-disabled="true">Crypto Deposit</a></li>
+                                </ul>
+                                <ul class="navbar-nav gap-3 align-items-lg-center">
+                                    <li class="nav-item"><a class="nav-link" href="refer.html">Refer</a></li>
+                                    <li class="nav-item"><a class="nav-link d-flex align-items-center gap-3" href="javascript:;">Help Center<span><img src="assets/img/icon/contact.svg" alt="contact" class="object-contain w-100"></a></span></li>
+                                    <li class="nav-item"><a class="text-uppercase fw-medium btn btn-theme2 themebtn" data-bs-toggle="modal" data-bs-target="#login" href="javascript:;">Login / Sign up</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    <!-- navbar ends -->
+
+    <!-- cards section start -->
+<div class="container-fluid planSection py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="sectionHeading">
+                    Our Portfolio Plans
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row gy-4 pt-5 mt-0 mt-md-4">
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="main-card">
+                            <div class="main-card_title">Weekly</div>
+                            <div class="pricing">20$<span class="small">/per Week</span></div>
+                            <div>Save $9</div>
+                            <div class="border-div"></div>
+                            <ul class="features">
+                                <li>One account</li>
+                                <li>Unlimited benifits</li>
+                                <li>Customized Plans</li>
+                            </ul>
+                            <a href="javascript:;" class="cta_btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="main-card">
+                            <div class="main-card_title">Monthly</div>
+                            <div class="pricing">39$<span class="small">/per month</span></div>
+                            <div>Save $15</div>
+                            <div class="border-div"></div>
+                            <ul class="features">
+                                <li>One account</li>
+                                <li>Unlimited benifits</li>
+                                <li>Customized Plans</li>
+                            </ul>
+                                <a href="javascript:;" class="cta_btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="main-card">
+                            <div class="main-card_title">Yearly</div>
+                            <div class="pricing">60$<span class="small">/per Year</span></div>
+                            <div>Save $25</div>
+                            <div class="border-div"></div>
+                            <ul class="features">
+                                <li>Six account</li>
+                                <li>Unlimited benifits</li>
+                                <li>Customized Plans</li>
+                            </ul>
+                                <a href="javascript:;" class="cta_btn">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cards section ends -->
+
+
+
+
+
+    <script>
+        const inputs = document.querySelectorAll('.box');
+    
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', (event) => {
+                const value = event.target.value;
+                if (value.length === 1) {
+                    if (index < inputs.length - 1) {
+                        inputs[index + 1].focus();
+                    }
+                }
+            });
+    
+            input.addEventListener('keydown', (event) => {
+                if (event.key === 'Backspace' && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+    
+
+    <!-- OTP Timer -->
+    <script>
+
+    let timer;
+    let countdown = 60; 
+
+    function startResendTimer() {
+        document.getElementById('resendBtn').disabled = true;
+        // Start the countdown
+        timer = setInterval(updateTimer, 1000);
+    }
+    function updateTimer() {
+    const timerElement = document.getElementById('timer');
+    if (countdown > 0) {
+        timerElement.textContent = `Resend in ${countdown} seconds`;
+        countdown--;
+    } else {
+        // Enable the button when the countdown reaches zero
+        document.getElementById('resendBtn').disabled = false;
+        timerElement.textContent = '';
+
+        // Reset countdown for the next attempt
+        countdown = 60;
+        // Stop the timer
+        clearInterval(timer);
+    }
+}
+
+    </script>
+
+    <!-- *Bootstrap Js* -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- *Custom Js* -->
+    <!-- <script src="assets/js/chart.js"></script> -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
